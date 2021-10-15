@@ -9,11 +9,12 @@ import SwiftUI
 
 struct CatImageView: View {
 
-    let image: RandomCat
+    let image: breeds
+    
     
     var body: some View {
         VStack(alignment: .center) {
-            Text(image.id)
+            Text(image.name)
             
             AsyncImage(url: URL(string: image.url)!)
         }
@@ -26,6 +27,6 @@ struct CatImageView: View {
 
 struct QuoteView_Previews: PreviewProvider {
     static var previews: some View {
-        CatImageView(image: RandomCat.dummyData.first!)
+        CatImageView(image: breeds.dummyData.first!)
     }
 }

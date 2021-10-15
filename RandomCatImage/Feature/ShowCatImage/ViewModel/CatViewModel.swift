@@ -15,7 +15,7 @@ protocol CatViewModel: ObservableObject {
 @MainActor
 final class CatViewModelImpl: CatViewModel, ObservableObject {
     
-    @Published private(set) var cats: [RandomCat] = []
+    @Published private(set) var cats: [breeds] = []
     
     private let service: CatService
     

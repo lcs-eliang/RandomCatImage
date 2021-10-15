@@ -12,6 +12,7 @@
 		99877F3C2718E31A00094C24 /* CatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99877F3B2718E31A00094C24 /* CatService.swift */; };
 		99877F402718EA3200094C24 /* CatImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99877F3F2718EA3200094C24 /* CatImageView.swift */; };
 		99877F422718F6EC00094C24 /* CatScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99877F412718F6EC00094C24 /* CatScreen.swift */; };
+		99D6E6852719E12400C62010 /* RandomCatImageApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D6E6842719E12400C62010 /* RandomCatImageApp.swift */; };
 		99EE69F227185F3400B0F613 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EE69F127185F3400B0F613 /* ContentView.swift */; };
 		99EE69F427185F3A00B0F613 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99EE69F327185F3A00B0F613 /* Assets.xcassets */; };
 		99EE69F727185F3A00B0F613 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99EE69F627185F3A00B0F613 /* Preview Assets.xcassets */; };
@@ -25,6 +26,7 @@
 		99877F3B2718E31A00094C24 /* CatService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatService.swift; sourceTree = "<group>"; };
 		99877F3F2718EA3200094C24 /* CatImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatImageView.swift; sourceTree = "<group>"; wrapsLines = 1; };
 		99877F412718F6EC00094C24 /* CatScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatScreen.swift; sourceTree = "<group>"; };
+		99D6E6842719E12400C62010 /* RandomCatImageApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomCatImageApp.swift; sourceTree = "<group>"; };
 		99EE69EC27185F3400B0F613 /* RandomCatImage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RandomCatImage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99EE69F127185F3400B0F613 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		99EE69F327185F3A00B0F613 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 		99EE69E327185F3400B0F613 = {
 			isa = PBXGroup;
 			children = (
+				99D6E6842719E12400C62010 /* RandomCatImageApp.swift */,
 				99EE69EE27185F3400B0F613 /* RandomCatImage */,
 				99EE69F527185F3A00B0F613 /* Preview Content */,
 				99EE69ED27185F3400B0F613 /* Products */,
@@ -250,6 +253,7 @@
 				99877F3C2718E31A00094C24 /* CatService.swift in Sources */,
 				99877F352718DF6000094C24 /* LoadingView.swift in Sources */,
 				99877F402718EA3200094C24 /* CatImageView.swift in Sources */,
+				99D6E6852719E12400C62010 /* RandomCatImageApp.swift in Sources */,
 				99877F3A2718E11800094C24 /* CatViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -380,7 +384,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"RandomCatImage/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 9AR5WFV9N9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -410,7 +414,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"RandomCatImage/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 9AR5WFV9N9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;

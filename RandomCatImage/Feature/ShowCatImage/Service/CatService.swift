@@ -8,15 +8,16 @@
 import Foundation
 
 protocol CatService {
-    func fetchRandomCats() async throws -> [RandomCat]
+    
+    func fetchRandomCats() async throws -> [breeds]
 }
 
 final class CatServiceImpl: CatService {
     
-    func fetchRandomQuotes() async throws -> [RandomCat] {
+    func fetchRandomCats() async throws -> [breeds] {
         let urlSession = URLSession.shared
-        let url = URL(string: APIConstants.baseURL.appending("/api/cats"))
+        let url = URL(string: APIConstants.baseURL.appending("/v1/images/search"))
         let (data, _) = try await urlSession.data(from: url!)
-        return try JSONDecoder().decode([RandomCat].self, from: data)
+        return try JSONDecoder().decode([breeds].self, from: data)
     }
 }

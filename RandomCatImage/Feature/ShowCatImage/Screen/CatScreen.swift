@@ -15,16 +15,17 @@ struct CatScreen: View {
     
     var body: some View {
         
-        Group {
-            if vm.images.isEmpty {
+        VStack {
+            if vm.cats.isEmpty {
                 LoadingView(text: "Fetching Images")
             } else {
                 List {
-                    ForEach(vm.images, id: \.Image) { item in
-                        CatImageView(image: item)
+                    ForEach(vm.cats, id: \.id) { image in
+                        CatImageView(image: image)
                     }
                 }
             }
+    
         }
         .task {
             await vm.getRandomImages()
