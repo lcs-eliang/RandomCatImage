@@ -20,13 +20,13 @@ struct CatScreen: View {
                 LoadingView(text: "Fetching Images")
             } else {
                 List {
-                    ForEach(vm.cats, id: \.id) { image in
-                        CatImageView(image: image)
+                    ForEach(vm.cats, id: \.id) {
+                        image in CatImageView(image: image)
                     }
                 }
             }
-    
         }
+
         .task {
             await vm.getRandomImages()
         }

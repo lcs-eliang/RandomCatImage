@@ -14,12 +14,13 @@ struct CatImageView: View {
     
     var body: some View {
         VStack(alignment: .center) {
-            Text(image.name)
+            Text(image.id)
             
             AsyncImage(url: URL(string: image.url)!)
         }
        .padding()
        .foregroundColor(.black)
+       .scaledToFit()
 
     }
     

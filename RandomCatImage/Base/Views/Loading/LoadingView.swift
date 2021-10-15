@@ -21,6 +21,6 @@ struct LoadingView: View {
 
 struct LoadingView_Previews: PreviewProvider {
     static var previews: some View {
-        LoadingView(text: "Fetching cat pictures")
+        LoadingView(text: "loading cat pictures")
     }
 }
