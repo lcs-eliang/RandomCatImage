@@ -7,18 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		99EE69F027185F3400B0F613 /* RandomCatImageApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EE69EF27185F3400B0F613 /* RandomCatImageApp.swift */; };
+		99877F352718DF6000094C24 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99877F342718DF6000094C24 /* LoadingView.swift */; };
+		99877F3A2718E11800094C24 /* CatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99877F392718E11800094C24 /* CatViewModel.swift */; };
+		99877F3C2718E31A00094C24 /* CatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99877F3B2718E31A00094C24 /* CatService.swift */; };
+		99877F402718EA3200094C24 /* CatImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99877F3F2718EA3200094C24 /* CatImageView.swift */; };
+		99877F422718F6EC00094C24 /* CatScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99877F412718F6EC00094C24 /* CatScreen.swift */; };
 		99EE69F227185F3400B0F613 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EE69F127185F3400B0F613 /* ContentView.swift */; };
 		99EE69F427185F3A00B0F613 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99EE69F327185F3A00B0F613 /* Assets.xcassets */; };
 		99EE69F727185F3A00B0F613 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99EE69F627185F3A00B0F613 /* Preview Assets.xcassets */; };
+		99EE69FE2718606800B0F613 /* RandomCat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EE69FD2718606800B0F613 /* RandomCat.swift */; };
+		99EE6A02271861B700B0F613 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EE6A01271861B700B0F613 /* APIConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		99877F342718DF6000094C24 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		99877F392718E11800094C24 /* CatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatViewModel.swift; sourceTree = "<group>"; };
+		99877F3B2718E31A00094C24 /* CatService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatService.swift; sourceTree = "<group>"; };
+		99877F3F2718EA3200094C24 /* CatImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatImageView.swift; sourceTree = "<group>"; wrapsLines = 1; };
+		99877F412718F6EC00094C24 /* CatScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatScreen.swift; sourceTree = "<group>"; };
 		99EE69EC27185F3400B0F613 /* RandomCatImage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RandomCatImage.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		99EE69EF27185F3400B0F613 /* RandomCatImageApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomCatImageApp.swift; sourceTree = "<group>"; };
 		99EE69F127185F3400B0F613 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		99EE69F327185F3A00B0F613 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		99EE69F627185F3A00B0F613 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		99EE69FD2718606800B0F613 /* RandomCat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomCat.swift; sourceTree = "<group>"; };
+		99EE6A01271861B700B0F613 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,10 +44,90 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		99877F2A2718BCB300094C24 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				99EE6A002718619600B0F613 /* Constants */,
+				99877F322718DF2700094C24 /* Views */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		99877F2C2718DCBC00094C24 /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				99877F2D2718DD5D00094C24 /* ShowCatImage */,
+				99EE69F127185F3400B0F613 /* ContentView.swift */,
+				99EE69F327185F3A00B0F613 /* Assets.xcassets */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
+		99877F2D2718DD5D00094C24 /* ShowCatImage */ = {
+			isa = PBXGroup;
+			children = (
+				99877F2E2718DE1A00094C24 /* ViewModel */,
+				99877F2F2718DE2500094C24 /* Service */,
+				99877F312718DF0F00094C24 /* Views */,
+				99877F382718E09C00094C24 /* Screen */,
+				99EE69FF2718613900B0F613 /* Model */,
+			);
+			path = ShowCatImage;
+			sourceTree = "<group>";
+		};
+		99877F2E2718DE1A00094C24 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				99877F392718E11800094C24 /* CatViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		99877F2F2718DE2500094C24 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				99877F3B2718E31A00094C24 /* CatService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		99877F312718DF0F00094C24 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				99877F3F2718EA3200094C24 /* CatImageView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		99877F322718DF2700094C24 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				99877F332718DF3F00094C24 /* Loading */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		99877F332718DF3F00094C24 /* Loading */ = {
+			isa = PBXGroup;
+			children = (
+				99877F342718DF6000094C24 /* LoadingView.swift */,
+			);
+			path = Loading;
+			sourceTree = "<group>";
+		};
+		99877F382718E09C00094C24 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				99877F412718F6EC00094C24 /* CatScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
 		99EE69E327185F3400B0F613 = {
 			isa = PBXGroup;
 			children = (
 				99EE69EE27185F3400B0F613 /* RandomCatImage */,
+				99EE69F527185F3A00B0F613 /* Preview Content */,
 				99EE69ED27185F3400B0F613 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -51,10 +143,8 @@
 		99EE69EE27185F3400B0F613 /* RandomCatImage */ = {
 			isa = PBXGroup;
 			children = (
-				99EE69EF27185F3400B0F613 /* RandomCatImageApp.swift */,
-				99EE69F127185F3400B0F613 /* ContentView.swift */,
-				99EE69F327185F3A00B0F613 /* Assets.xcassets */,
-				99EE69F527185F3A00B0F613 /* Preview Content */,
+				99877F2A2718BCB300094C24 /* Base */,
+				99877F2C2718DCBC00094C24 /* Feature */,
 			);
 			path = RandomCatImage;
 			sourceTree = "<group>";
@@ -65,6 +155,22 @@
 				99EE69F627185F3A00B0F613 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		99EE69FF2718613900B0F613 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				99EE69FD2718606800B0F613 /* RandomCat.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		99EE6A002718619600B0F613 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				99EE6A01271861B700B0F613 /* APIConstants.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +243,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99EE6A02271861B700B0F613 /* APIConstants.swift in Sources */,
 				99EE69F227185F3400B0F613 /* ContentView.swift in Sources */,
-				99EE69F027185F3400B0F613 /* RandomCatImageApp.swift in Sources */,
+				99877F422718F6EC00094C24 /* CatScreen.swift in Sources */,
+				99EE69FE2718606800B0F613 /* RandomCat.swift in Sources */,
+				99877F3C2718E31A00094C24 /* CatService.swift in Sources */,
+				99877F352718DF6000094C24 /* LoadingView.swift in Sources */,
+				99877F402718EA3200094C24 /* CatImageView.swift in Sources */,
+				99877F3A2718E11800094C24 /* CatViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
