@@ -12,18 +12,40 @@ struct CatScreen: View {
     @StateObject private var vm = CatViewModelImpl(
         service: CatServiceImpl()
     )
-    
+    func reload()
+    {
+        Task {
+            await vm.getRandomImages()
+        }
+        
+    }
     var body: some View {
         
         VStack {
             if vm.cats.isEmpty {
                 LoadingView(text: "Fetching Images")
             } else {
+                
                 List {
                     ForEach(vm.cats, id: \.id) {
                         image in CatImageView(image: image)
+                            .frame(width: 300, height: 400)
                     }
                 }
+                Button(action: {
+                    reload()
+                }) {
+                     Text("More please!")
+                     .padding(12)
+                     .foregroundColor(Color.white)
+                     .background(Color.purple)
+                     .cornerRadius(8)
+                }
+               .foregroundColor(.black)
+               .scaledToFit()
+        
+               
+                
             }
         }
 
@@ -31,6 +53,8 @@ struct CatScreen: View {
             await vm.getRandomImages()
         }
     }
+    
+    
 }
 
 

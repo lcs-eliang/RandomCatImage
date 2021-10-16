@@ -13,17 +13,32 @@ struct CatImageView: View {
     
     
     var body: some View {
+        
         VStack(alignment: .center) {
-            Text(image.id)
             
-            AsyncImage(url: URL(string: image.url)!)
+            Text("CATS")
+                .font(.title)
+                .foregroundColor(Color.white)
+                .padding()
+            
+            AsyncImage(url: URL(string: image.url)!){ phase in
+                switch phase {
+                case .empty:
+                    ProgressView()
+                case .success(let image):
+                    image.resizable()
+                         .aspectRatio(contentMode: .fit)
+                         .frame(maxWidth: 300, maxHeight: 600)
+                case .failure:
+                    Image(systemName: "photo")
+                @unknown default:
+                    EmptyView()
+                }
+            }
+            
+       
         }
-       .padding()
-       .foregroundColor(.black)
-       .scaledToFit()
-
     }
-    
 }
 
 struct QuoteView_Previews: PreviewProvider {

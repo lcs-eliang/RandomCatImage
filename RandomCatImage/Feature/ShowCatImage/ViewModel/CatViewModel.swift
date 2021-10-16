@@ -26,6 +26,7 @@ final class CatViewModelImpl: CatViewModel, ObservableObject {
     func getRandomImages() async {
         do {
             self.cats = try await service.fetchRandomCats()
+            print(self.cats)
         } catch {
             print(error)
         }
