@@ -22,6 +22,11 @@ struct CatScreen: View {
     var body: some View {
         
         VStack {
+            
+            Text("CATS")
+                .font(.title)
+                .padding(13)
+            
             if vm.cats.isEmpty {
                 LoadingView(text: "Fetching Images")
             } else {
@@ -36,10 +41,11 @@ struct CatScreen: View {
                     reload()
                 }) {
                      Text("More please!")
+                    .font(.title3)
                      .padding(12)
                      .foregroundColor(Color.white)
                      .background(Color.purple)
-                     .cornerRadius(8)
+                     .cornerRadius(10)
                 }
                .foregroundColor(.black)
                .scaledToFit()

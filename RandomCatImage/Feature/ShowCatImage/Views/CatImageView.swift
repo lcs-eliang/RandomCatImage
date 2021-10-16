@@ -15,12 +15,7 @@ struct CatImageView: View {
     var body: some View {
         
         VStack(alignment: .center) {
-            
-            Text("CATS")
-                .font(.title)
-                .foregroundColor(Color.white)
-                .padding()
-            
+                        
             AsyncImage(url: URL(string: image.url)!){ phase in
                 switch phase {
                 case .empty:
